@@ -1,0 +1,44 @@
+[
+  {
+    "level_": 0,
+    "message_": "Start JSON generation. Platform version: 21 min SDK version: x86",
+    "file_": "C:\\Users\\Faeq\\AndroidStudioProjects\\Wrdsrch\\OpenCV\\libcxx_helper\\CMakeLists.txt",
+    "tag_": "release|x86",
+    "diagnosticCode_": 0,
+    "memoizedIsInitialized": 1,
+    "unknownFields": {
+      "fields": {},
+      "fieldsDescending": {}
+    },
+    "memoizedSize": -1,
+    "memoizedHashCode": -5163087
+  },
+  {
+    "level_": 0,
+    "message_": "JSON \u0027C:\\Users\\Faeq\\AndroidStudioProjects\\Wrdsrch\\OpenCV\\.cxx\\RelWithDebInfo\\3mc13b47\\x86\\android_gradle_build.json\u0027 was up-to-date",
+    "file_": "C:\\Users\\Faeq\\AndroidStudioProjects\\Wrdsrch\\OpenCV\\libcxx_helper\\CMakeLists.txt",
+    "tag_": "release|x86",
+    "diagnosticCode_": 0,
+    "memoizedIsInitialized": 1,
+    "unknownFields": {
+      "fields": {},
+      "fieldsDescending": {}
+    },
+    "memoizedSize": -1,
+    "memoizedHashCode": 559282120
+  },
+  {
+    "level_": 0,
+    "message_": "JSON generation completed without problems",
+    "file_": "C:\\Users\\Faeq\\AndroidStudioProjects\\Wrdsrch\\OpenCV\\libcxx_helper\\CMakeLists.txt",
+    "tag_": "release|x86",
+    "diagnosticCode_": 0,
+    "memoizedIsInitialized": 1,
+    "unknownFields": {
+      "fields": {},
+      "fieldsDescending": {}
+    },
+    "memoizedSize": -1,
+    "memoizedHashCode": -213273922
+  }
+]
