@@ -11,11 +11,11 @@
       "fieldsDescending": {}
     },
     "memoizedSize": -1,
-    "memoizedHashCode": 1045152986
+    "memoizedHashCode": -1924594523
   },
   {
     "level_": 0,
-    "message_": "rebuilding JSON C:\\Users\\Faeq\\AndroidStudioProjects\\Wrdsrch\\OpenCV\\.cxx\\Debug\\71w5c563\\x86\\android_gradle_build.json due to:",
+    "message_": "JSON \u0027C:\\Users\\Faeq\\AndroidStudioProjects\\Wrdsrch\\OpenCV\\.cxx\\Debug\\71w5c563\\x86\\android_gradle_build.json\u0027 was up-to-date",
     "file_": "C:\\Users\\Faeq\\AndroidStudioProjects\\Wrdsrch\\OpenCV\\libcxx_helper\\CMakeLists.txt",
     "tag_": "debug|x86",
     "diagnosticCode_": 0,
@@ -25,133 +25,7 @@
       "fieldsDescending": {}
     },
     "memoizedSize": -1,
-    "memoizedHashCode": -917259883
-  },
-  {
-    "level_": 0,
-    "message_": "- expected json C:\\Users\\Faeq\\AndroidStudioProjects\\Wrdsrch\\OpenCV\\.cxx\\Debug\\71w5c563\\x86\\android_gradle_build.json file is not present, will remove stale json folder",
-    "file_": "C:\\Users\\Faeq\\AndroidStudioProjects\\Wrdsrch\\OpenCV\\libcxx_helper\\CMakeLists.txt",
-    "tag_": "debug|x86",
-    "diagnosticCode_": 0,
-    "memoizedIsInitialized": 1,
-    "unknownFields": {
-      "fields": {},
-      "fieldsDescending": {}
-    },
-    "memoizedSize": -1,
-    "memoizedHashCode": 320291461
-  },
-  {
-    "level_": 0,
-    "message_": "- missing previous command file C:\\Users\\Faeq\\AndroidStudioProjects\\Wrdsrch\\OpenCV\\.cxx\\Debug\\71w5c563\\x86\\metadata_generation_command.txt, will remove stale json folder",
-    "file_": "C:\\Users\\Faeq\\AndroidStudioProjects\\Wrdsrch\\OpenCV\\libcxx_helper\\CMakeLists.txt",
-    "tag_": "debug|x86",
-    "diagnosticCode_": 0,
-    "memoizedIsInitialized": 1,
-    "unknownFields": {
-      "fields": {},
-      "fieldsDescending": {}
-    },
-    "memoizedSize": -1,
-    "memoizedHashCode": 1965175235
-  },
-  {
-    "level_": 0,
-    "message_": "- command changed from previous, will remove stale json folder",
-    "file_": "C:\\Users\\Faeq\\AndroidStudioProjects\\Wrdsrch\\OpenCV\\libcxx_helper\\CMakeLists.txt",
-    "tag_": "debug|x86",
-    "diagnosticCode_": 0,
-    "memoizedIsInitialized": 1,
-    "unknownFields": {
-      "fields": {},
-      "fieldsDescending": {}
-    },
-    "memoizedSize": -1,
-    "memoizedHashCode": -1827205559
-  },
-  {
-    "level_": 0,
-    "message_": "created folder \u0027C:\\Users\\Faeq\\AndroidStudioProjects\\Wrdsrch\\OpenCV\\.cxx\\Debug\\71w5c563\\x86\u0027",
-    "file_": "C:\\Users\\Faeq\\AndroidStudioProjects\\Wrdsrch\\OpenCV\\libcxx_helper\\CMakeLists.txt",
-    "tag_": "debug|x86",
-    "diagnosticCode_": 0,
-    "memoizedIsInitialized": 1,
-    "unknownFields": {
-      "fields": {},
-      "fieldsDescending": {}
-    },
-    "memoizedSize": -1,
-    "memoizedHashCode": 384394805
-  },
-  {
-    "level_": 0,
-    "message_": "executing cmake @echo off\n\"C:\\\\Users\\\\Faeq\\\\AppData\\\\Local\\\\Android\\\\Sdk\\\\cmake\\\\3.18.1\\\\bin\\\\cmake.exe\" ^\n  \"-HC:\\\\Users\\\\Faeq\\\\AndroidStudioProjects\\\\Wrdsrch\\\\OpenCV\\\\libcxx_helper\" ^\n  \"-DCMAKE_SYSTEM_NAME\u003dAndroid\" ^\n  \"-DCMAKE_EXPORT_COMPILE_COMMANDS\u003dON\" ^\n  \"-DCMAKE_SYSTEM_VERSION\u003d28\" ^\n  \"-DANDROID_PLATFORM\u003dandroid-28\" ^\n  \"-DANDROID_ABI\u003dx86\" ^\n  \"-DCMAKE_ANDROID_ARCH_ABI\u003dx86\" ^\n  \"-DANDROID_NDK\u003dC:\\\\Users\\\\Faeq\\\\AppData\\\\Local\\\\Android\\\\Sdk\\\\ndk\\\\23.1.7779620\" ^\n  \"-DCMAKE_ANDROID_NDK\u003dC:\\\\Users\\\\Faeq\\\\AppData\\\\Local\\\\Android\\\\Sdk\\\\ndk\\\\23.1.7779620\" ^\n  \"-DCMAKE_TOOLCHAIN_FILE\u003dC:\\\\Users\\\\Faeq\\\\AppData\\\\Local\\\\Android\\\\Sdk\\\\ndk\\\\23.1.7779620\\\\build\\\\cmake\\\\android.toolchain.cmake\" ^\n  \"-DCMAKE_MAKE_PROGRAM\u003dC:\\\\Users\\\\Faeq\\\\AppData\\\\Local\\\\Android\\\\Sdk\\\\cmake\\\\3.18.1\\\\bin\\\\ninja.exe\" ^\n  \"-DCMAKE_LIBRARY_OUTPUT_DIRECTORY\u003dC:\\\\Users\\\\Faeq\\\\AndroidStudioProjects\\\\Wrdsrch\\\\OpenCV\\\\build\\\\intermediates\\\\cxx\\\\Debug\\\\71w5c563\\\\obj\\\\x86\" ^\n  \"-DCMAKE_RUNTIME_OUTPUT_DIRECTORY\u003dC:\\\\Users\\\\Faeq\\\\AndroidStudioProjects\\\\Wrdsrch\\\\OpenCV\\\\build\\\\intermediates\\\\cxx\\\\Debug\\\\71w5c563\\\\obj\\\\x86\" ^\n  \"-DCMAKE_BUILD_TYPE\u003dDebug\" ^\n  \"-BC:\\\\Users\\\\Faeq\\\\AndroidStudioProjects\\\\Wrdsrch\\\\OpenCV\\\\.cxx\\\\Debug\\\\71w5c563\\\\x86\" ^\n  -GNinja ^\n  \"-DANDROID_STL\u003dc++_shared\"\n",
-    "file_": "C:\\Users\\Faeq\\AndroidStudioProjects\\Wrdsrch\\OpenCV\\libcxx_helper\\CMakeLists.txt",
-    "tag_": "debug|x86",
-    "diagnosticCode_": 0,
-    "memoizedIsInitialized": 1,
-    "unknownFields": {
-      "fields": {},
-      "fieldsDescending": {}
-    },
-    "memoizedSize": -1,
-    "memoizedHashCode": -1501924703
-  },
-  {
-    "level_": 0,
-    "message_": "@echo off\n\"C:\\\\Users\\\\Faeq\\\\AppData\\\\Local\\\\Android\\\\Sdk\\\\cmake\\\\3.18.1\\\\bin\\\\cmake.exe\" ^\n  \"-HC:\\\\Users\\\\Faeq\\\\AndroidStudioProjects\\\\Wrdsrch\\\\OpenCV\\\\libcxx_helper\" ^\n  \"-DCMAKE_SYSTEM_NAME\u003dAndroid\" ^\n  \"-DCMAKE_EXPORT_COMPILE_COMMANDS\u003dON\" ^\n  \"-DCMAKE_SYSTEM_VERSION\u003d28\" ^\n  \"-DANDROID_PLATFORM\u003dandroid-28\" ^\n  \"-DANDROID_ABI\u003dx86\" ^\n  \"-DCMAKE_ANDROID_ARCH_ABI\u003dx86\" ^\n  \"-DANDROID_NDK\u003dC:\\\\Users\\\\Faeq\\\\AppData\\\\Local\\\\Android\\\\Sdk\\\\ndk\\\\23.1.7779620\" ^\n  \"-DCMAKE_ANDROID_NDK\u003dC:\\\\Users\\\\Faeq\\\\AppData\\\\Local\\\\Android\\\\Sdk\\\\ndk\\\\23.1.7779620\" ^\n  \"-DCMAKE_TOOLCHAIN_FILE\u003dC:\\\\Users\\\\Faeq\\\\AppData\\\\Local\\\\Android\\\\Sdk\\\\ndk\\\\23.1.7779620\\\\build\\\\cmake\\\\android.toolchain.cmake\" ^\n  \"-DCMAKE_MAKE_PROGRAM\u003dC:\\\\Users\\\\Faeq\\\\AppData\\\\Local\\\\Android\\\\Sdk\\\\cmake\\\\3.18.1\\\\bin\\\\ninja.exe\" ^\n  \"-DCMAKE_LIBRARY_OUTPUT_DIRECTORY\u003dC:\\\\Users\\\\Faeq\\\\AndroidStudioProjects\\\\Wrdsrch\\\\OpenCV\\\\build\\\\intermediates\\\\cxx\\\\Debug\\\\71w5c563\\\\obj\\\\x86\" ^\n  \"-DCMAKE_RUNTIME_OUTPUT_DIRECTORY\u003dC:\\\\Users\\\\Faeq\\\\AndroidStudioProjects\\\\Wrdsrch\\\\OpenCV\\\\build\\\\intermediates\\\\cxx\\\\Debug\\\\71w5c563\\\\obj\\\\x86\" ^\n  \"-DCMAKE_BUILD_TYPE\u003dDebug\" ^\n  \"-BC:\\\\Users\\\\Faeq\\\\AndroidStudioProjects\\\\Wrdsrch\\\\OpenCV\\\\.cxx\\\\Debug\\\\71w5c563\\\\x86\" ^\n  -GNinja ^\n  \"-DANDROID_STL\u003dc++_shared\"\n",
-    "file_": "C:\\Users\\Faeq\\AndroidStudioProjects\\Wrdsrch\\OpenCV\\libcxx_helper\\CMakeLists.txt",
-    "tag_": "debug|x86",
-    "diagnosticCode_": 0,
-    "memoizedIsInitialized": 1,
-    "unknownFields": {
-      "fields": {},
-      "fieldsDescending": {}
-    },
-    "memoizedSize": -1,
-    "memoizedHashCode": -1465083710
-  },
-  {
-    "level_": 0,
-    "message_": "Exiting generation of C:\\Users\\Faeq\\AndroidStudioProjects\\Wrdsrch\\OpenCV\\.cxx\\Debug\\71w5c563\\x86\\compile_commands.json.bin normally",
-    "file_": "C:\\Users\\Faeq\\AndroidStudioProjects\\Wrdsrch\\OpenCV\\libcxx_helper\\CMakeLists.txt",
-    "tag_": "debug|x86",
-    "diagnosticCode_": 0,
-    "memoizedIsInitialized": 1,
-    "unknownFields": {
-      "fields": {},
-      "fieldsDescending": {}
-    },
-    "memoizedSize": -1,
-    "memoizedHashCode": 101133995
-  },
-  {
-    "level_": 0,
-    "message_": "done executing cmake",
-    "file_": "C:\\Users\\Faeq\\AndroidStudioProjects\\Wrdsrch\\OpenCV\\libcxx_helper\\CMakeLists.txt",
-    "tag_": "debug|x86",
-    "diagnosticCode_": 0,
-    "memoizedIsInitialized": 1,
-    "unknownFields": {
-      "fields": {},
-      "fieldsDescending": {}
-    },
-    "memoizedSize": -1,
-    "memoizedHashCode": -2139551810
-  },
-  {
-    "level_": 0,
-    "message_": "write command file C:\\Users\\Faeq\\AndroidStudioProjects\\Wrdsrch\\OpenCV\\.cxx\\Debug\\71w5c563\\x86\\metadata_generation_command.txt",
-    "file_": "C:\\Users\\Faeq\\AndroidStudioProjects\\Wrdsrch\\OpenCV\\libcxx_helper\\CMakeLists.txt",
-    "tag_": "debug|x86",
-    "diagnosticCode_": 0,
-    "memoizedIsInitialized": 1,
-    "unknownFields": {
-      "fields": {},
-      "fieldsDescending": {}
-    },
-    "memoizedSize": -1,
-    "memoizedHashCode": -18389601
+    "memoizedHashCode": 1233234871
   },
   {
     "level_": 0,
@@ -165,6 +39,6 @@
       "fieldsDescending": {}
     },
     "memoizedSize": -1,
-    "memoizedHashCode": -201478726
+    "memoizedHashCode": 1123741061
   }
 ]

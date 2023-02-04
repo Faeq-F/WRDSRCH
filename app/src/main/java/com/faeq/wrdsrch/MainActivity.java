@@ -108,6 +108,7 @@ public class MainActivity extends AppCompatActivity implements CameraBridgeViewB
     //------------------------------------------------------------------------------------------------------
     @Override
     public Mat onCameraFrame(CameraBridgeViewBase.CvCameraViewFrame inputFrame) {
+        
         mRgba = inputFrame.rgba();
         ArrayList<MatOfPoint> contours = new ArrayList<MatOfPoint>();
         Mat hierarchy = new Mat();
@@ -119,14 +120,14 @@ public class MainActivity extends AppCompatActivity implements CameraBridgeViewB
         for( int i = 0; i< contours.size(); i++ ){
             Scalar color =new Scalar(Math.random()*255, Math.random()*255, Math.random()*255);
             Imgproc.drawContours( drawing, contours, i, color, 2, 8, hierarchy, 0, new Point() );
-        }*/
+        } */
         hierarchy.release();
         // Imgproc.cvtColor(mIntermediateMat, mRgba, Imgproc.COLOR_GRAY2RGBA, 4)
         /* Mat drawing = Mat.zeros( mIntermediateMat.size(), CvType.CV_8UC3 );
         for( int i = 0; i< contours.size(); i++ ){
             Scalar color =new Scalar(Math.random()*255, Math.random()*255, Math.random()*255);
             Imgproc.drawContours( drawing, contours, i, color, 2, 8, hierarchy, 0, new Point() );
-        }*/
+        } */
         for ( int contourIdx=0; contourIdx < contours.size(); contourIdx++ ) {
             // Minimum size allowed for consideration
             MatOfPoint2f approxCurve = new MatOfPoint2f();
@@ -140,12 +141,10 @@ public class MainActivity extends AppCompatActivity implements CameraBridgeViewB
 
             // Get bounding rect of contour
 
-            //if (points.size() > 50)
-            Rect rect = Imgproc.boundingRect(points);
 
-            Imgproc.rectangle(mRgba, new Point(rect.x, rect.y), new Point(rect.x + rect.width, rect.y + rect.height), new Scalar(0, 255, 0), -1);
+                Rect rect = Imgproc.boundingRect(points);
 
-
+                Imgproc.rectangle(mRgba, new Point(rect.x, rect.y), new Point(rect.x + rect.width, rect.y + rect.height), new Scalar(0, 255, 0), 5);
 
         }
         return mRgba;
