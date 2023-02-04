@@ -24,11 +24,14 @@ import org.opencv.core.Core;
 import org.opencv.core.CvType;
 import org.opencv.core.Mat;
 import org.opencv.core.MatOfPoint;
+import org.opencv.core.MatOfPoint2f;
+import org.opencv.core.Point;
 import org.opencv.core.Rect;
 import org.opencv.core.Scalar;
 import org.opencv.core.Size;
 import org.opencv.imgproc.Imgproc;
 //Java imports; OpenCV methods require data to be given in lists of this type
+import java.util.ArrayList;
 import java.util.List;
 //----------------------------------------------------------------------------------------------------------
 public class MainActivity extends AppCompatActivity implements CameraBridgeViewBase.CvCameraViewListener2 {
@@ -106,8 +109,45 @@ public class MainActivity extends AppCompatActivity implements CameraBridgeViewB
     @Override
     public Mat onCameraFrame(CameraBridgeViewBase.CvCameraViewFrame inputFrame) {
         mRgba = inputFrame.rgba();
+        ArrayList<MatOfPoint> contours = new ArrayList<MatOfPoint>();
+        Mat hierarchy = new Mat();
+        Mat mIntermediateMat = new Mat();
+        Imgproc.GaussianBlur(mRgba,mIntermediateMat,new Size(9,9),2,2);
+        Imgproc.Canny(mRgba, mIntermediateMat, 80, 100);
+        Imgproc.findContours(mIntermediateMat, contours, hierarchy, Imgproc.RETR_TREE, Imgproc.CHAIN_APPROX_SIMPLE, new Point(0, 0));
+        /* Mat drawing = Mat.zeros( mIntermediateMat.size(), CvType.CV_8UC3 );
+        for( int i = 0; i< contours.size(); i++ ){
+            Scalar color =new Scalar(Math.random()*255, Math.random()*255, Math.random()*255);
+            Imgproc.drawContours( drawing, contours, i, color, 2, 8, hierarchy, 0, new Point() );
+        }*/
+        hierarchy.release();
+        // Imgproc.cvtColor(mIntermediateMat, mRgba, Imgproc.COLOR_GRAY2RGBA, 4)
+        /* Mat drawing = Mat.zeros( mIntermediateMat.size(), CvType.CV_8UC3 );
+        for( int i = 0; i< contours.size(); i++ ){
+            Scalar color =new Scalar(Math.random()*255, Math.random()*255, Math.random()*255);
+            Imgproc.drawContours( drawing, contours, i, color, 2, 8, hierarchy, 0, new Point() );
+        }*/
+        for ( int contourIdx=0; contourIdx < contours.size(); contourIdx++ ) {
+            // Minimum size allowed for consideration
+            MatOfPoint2f approxCurve = new MatOfPoint2f();
+            MatOfPoint2f contour2f = new MatOfPoint2f( contours.get(contourIdx).toArray() );
+            //Processing on mMOP2f1 which is in type MatOfPoint2f
+            double approxDistance = Imgproc.arcLength(contour2f, true)*0.02;
+            Imgproc.approxPolyDP(contour2f, approxCurve, approxDistance, true);
+
+            //Convert back to MatOfPoint
+            MatOfPoint points = new MatOfPoint( approxCurve.toArray() );
+
+            // Get bounding rect of contour
+
+            //if (points.size() > 50)
+            Rect rect = Imgproc.boundingRect(points);
+
+            Imgproc.rectangle(mRgba, new Point(rect.x, rect.y), new Point(rect.x + rect.width, rect.y + rect.height), new Scalar(0, 255, 0), -1);
 
 
+
+        }
         return mRgba;
     }
 
