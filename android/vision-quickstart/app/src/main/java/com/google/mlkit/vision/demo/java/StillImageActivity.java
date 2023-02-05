@@ -105,8 +105,8 @@ public final class StillImageActivity extends AppCompatActivity {
 
   private ImageView preview;
   private GraphicOverlay graphicOverlay;
-  private String selectedMode = OBJECT_DETECTION;
-  private String selectedSize = SIZE_SCREEN;
+  private String selectedMode = TEXT_RECOGNITION_LATIN;
+  private String selectedSize = SIZE_ORIGINAL;
 
   boolean isLandScape;
 
@@ -209,7 +209,7 @@ public final class StillImageActivity extends AppCompatActivity {
   private void populateFeatureSelector() {
     Spinner featureSpinner = findViewById(R.id.feature_selector);
     List<String> options = new ArrayList<>();
-    options.add(OBJECT_DETECTION);
+    /*options.add(OBJECT_DETECTION);
     options.add(OBJECT_DETECTION_CUSTOM);
     options.add(CUSTOM_AUTOML_OBJECT_DETECTION);
     options.add(FACE_DETECTION);
@@ -218,13 +218,13 @@ public final class StillImageActivity extends AppCompatActivity {
     options.add(IMAGE_LABELING_CUSTOM);
     options.add(CUSTOM_AUTOML_LABELING);
     options.add(POSE_DETECTION);
-    options.add(SELFIE_SEGMENTATION);
+    options.add(SELFIE_SEGMENTATION);*/
     options.add(TEXT_RECOGNITION_LATIN);
-    options.add(TEXT_RECOGNITION_CHINESE);
+    /*options.add(TEXT_RECOGNITION_CHINESE);
     options.add(TEXT_RECOGNITION_DEVANAGARI);
     options.add(TEXT_RECOGNITION_JAPANESE);
     options.add(TEXT_RECOGNITION_KOREAN);
-    options.add(FACE_MESH_DETECTION);
+    options.add(FACE_MESH_DETECTION);*/
 
     // Creating adapter for featureSpinner
     ArrayAdapter<String> dataAdapter = new ArrayAdapter<>(this, R.layout.spinner_style, options);
