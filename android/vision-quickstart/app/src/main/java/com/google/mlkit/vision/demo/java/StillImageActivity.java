@@ -18,7 +18,9 @@ package com.google.mlkit.vision.demo.java;
 
 import static java.lang.Math.max;
 
+import android.app.Activity;
 import android.content.ContentValues;
+
 import android.content.Intent;
 import android.content.res.Configuration;
 import android.graphics.Bitmap;
@@ -34,6 +36,7 @@ import android.view.ViewTreeObserver.OnGlobalLayoutListener;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemSelectedListener;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.PopupMenu;
 import android.widget.Spinner;
@@ -51,6 +54,7 @@ import com.google.mlkit.vision.demo.java.objectdetector.ObjectDetectorProcessor;
 import com.google.mlkit.vision.demo.java.posedetector.PoseDetectorProcessor;
 import com.google.mlkit.vision.demo.java.segmenter.SegmenterProcessor;
 import com.google.mlkit.vision.demo.java.facemeshdetector.FaceMeshDetectorProcessor;
+import com.google.mlkit.vision.demo.java.textdetector.TextGraphic;
 import com.google.mlkit.vision.demo.java.textdetector.TextRecognitionProcessor;
 import com.google.mlkit.vision.demo.preference.PreferenceUtils;
 import com.google.mlkit.vision.demo.preference.SettingsActivity;
@@ -115,11 +119,23 @@ public final class StillImageActivity extends AppCompatActivity {
   private int imageMaxHeight;
   private VisionImageProcessor imageProcessor;
 
+
+
   @Override
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
 
     setContentView(R.layout.activity_still_image);
+    Button button = (Button)findViewById(R.id.getAnswer);
+    button.setOnClickListener(new View.OnClickListener() {
+      public void onClick(View v) {
+        Intent i = new Intent(v.getContext(), ActivityStore.class);
+        startActivity(i);
+      }
+    });
+    //findViewById(R.id.getAnswer).setOnClickListener(
+
+    //);
 
     findViewById(R.id.select_image_button)
         .setOnClickListener(
@@ -251,9 +267,9 @@ public final class StillImageActivity extends AppCompatActivity {
   private void populateSizeSelector() {
     Spinner sizeSpinner = findViewById(R.id.size_selector);
     List<String> options = new ArrayList<>();
-    options.add(SIZE_SCREEN);
+    /*options.add(SIZE_SCREEN);
     options.add(SIZE_1024_768);
-    options.add(SIZE_640_480);
+    options.add(SIZE_640_480);*/
     options.add(SIZE_ORIGINAL);
 
     // Creating adapter for featureSpinner
@@ -444,6 +460,7 @@ public final class StillImageActivity extends AppCompatActivity {
           }
           imageProcessor =
               new TextRecognitionProcessor(this, new TextRecognizerOptions.Builder().build());
+
           break;
         case TEXT_RECOGNITION_CHINESE:
           if (imageProcessor != null) {

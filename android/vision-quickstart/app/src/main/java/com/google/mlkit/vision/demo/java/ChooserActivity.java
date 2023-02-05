@@ -81,6 +81,7 @@ public final class ChooserActivity extends AppCompatActivity
 
     setContentView(R.layout.activity_chooser);
 
+
     // Set up ListView and Adapter
     ListView listView = findViewById(R.id.test_activity_list_view);
 
@@ -120,7 +121,7 @@ public final class ChooserActivity extends AppCompatActivity
         view = inflater.inflate(android.R.layout.simple_list_item_2, null);
       }
 
-      ((TextView) view.findViewById(android.R.id.text1)).setText(classes[position].getSimpleName());
+      //((TextView) view.findViewById(android.R.id.text1)).setText(classes[position].getSimpleName());
       ((TextView) view.findViewById(android.R.id.text2)).setText(descriptionIds[position]);
 
       return view;

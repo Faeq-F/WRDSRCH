@@ -71,12 +71,13 @@
           tools:ignore="TouchTargetSizeCheck" />
 
       <Button
-          android:id="@+id/select_image_button2"
+          android:id="@+id/getAnswer"
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
           android:layout_gravity="center"
           android:layout_margin="12dp"
           android:text="get answer"
+
           tools:ignore="TouchTargetSizeCheck" />
     </LinearLayout>
   </LinearLayout>

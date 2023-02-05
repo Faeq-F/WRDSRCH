@@ -42,6 +42,10 @@
             android:value="barcode,face,ocr,ica,custom_ica"/>
 
         <activity
+            android:name=".java.ActivityStore"
+            android:label="@string/app_name"/>
+
+        <activity
             android:name=".EntryChoiceActivity"
             android:exported="true"
             android:theme="@style/AppTheme">

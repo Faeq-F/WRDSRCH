@@ -106,7 +106,7 @@ public class TextGraphic extends Graphic {
         gridDone = true;
       }else{
         WordsToFind.add(textToProcess);
-        Log.d(TAG, "A word to find is: " + textToProcess);
+        //Log.d(TAG, "A word to find is: " + textToProcess);
       }
 
 

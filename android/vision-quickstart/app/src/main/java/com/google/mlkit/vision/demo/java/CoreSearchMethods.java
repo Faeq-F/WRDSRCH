@@ -6,6 +6,7 @@ import com.google.mlkit.vision.demo.java.textdetector.TextGraphic;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.HashMap;
 
 public class CoreSearchMethods {
 
@@ -17,13 +18,60 @@ public class CoreSearchMethods {
         findHorz(word_src, "ARE") ;
         findVert(vert, "HELL") ;
         findDiag(diag, "HELL") ;
-        String[] FindWords = (String[]) TextGraphic.WordsToFind.toArray();
-        for (int i = 0; i <= TextGraphic.Word_src.length; i++) {
-            TextGraphic.Word_src[i] = TextGraphic.Word_src[i].replace('|', 'I').replaceAll("\\s", "");
-      Log.d("TAG", "A source line is: " + TextGraphic.Word_src[i]);
-    }
+
+
+
 
     }
+
+
+    public static HashMap<String, int[]> searchWords(String[] word_block, String[] words) {
+        for (int i = 0; i <= words.length; i++) {
+            words[i] = words[i].replace('|', 'I').replaceAll("\\s", "");
+        }
+        HashMap<String, int[]> solutions = new HashMap<String, int[]>() ;
+
+        int[] sols_coords ;
+
+
+
+        for (String word : words) {
+
+            // search horizontally
+
+            sols_coords = findHorz(word_block, word) ;
+
+            if (sols_coords != null) {
+
+                solutions.put(word, sols_coords) ;
+
+                continue ;
+
+            }
+
+
+
+            // search vertically
+
+            sols_coords = findVert(word_block, word) ;
+
+            if (sols_coords != null) {
+
+                solutions.put(word, sols_coords) ;
+
+                continue ;
+
+            }
+
+        }
+
+
+
+        return solutions ;
+
+    }
+
+
 
 
     // Input: normal word search block and word to find

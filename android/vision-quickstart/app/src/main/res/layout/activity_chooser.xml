@@ -9,24 +9,20 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:orientation="vertical">
 
-  <ImageView
-      android:id="@+id/imageView"
-      android:contentDescription="@string/app_name"
-      android:layout_width="match_parent"
-      android:layout_height="50dp"
-      android:layout_marginTop="32dp"
-      app:srcCompat="@drawable/logo_mlkit" />
+
 
   <TextView
+      android:id="@+id/ScanButton"
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
       android:paddingTop="32dp"
       android:paddingBottom="32dp"
       android:fontFamily="google-sans"
       android:gravity="center_horizontal"
-      android:text="@string/app_name"
+      android:text="Scan word search"
       android:textColor="@color/white"
       android:textSize="18sp"/>
+
 
   <ListView
       android:id="@+id/test_activity_list_view"

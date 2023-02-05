@@ -40,14 +40,14 @@ class EntryChoiceActivity : AppCompatActivity(), ActivityCompat.OnRequestPermiss
       startActivity(intent)
     }
 
-    findViewById<TextView>(R.id.kotlin_entry_point).setOnClickListener {
+    /*findViewById<TextView>(R.id.kotlin_entry_point).setOnClickListener {
       val intent =
         Intent(
           this@EntryChoiceActivity,
           com.google.mlkit.vision.demo.kotlin.ChooserActivity::class.java
         )
       startActivity(intent)
-    }
+    }*/
 
     if (!allRuntimePermissionsGranted()) {
       getRuntimePermissions()
