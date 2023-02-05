@@ -172,14 +172,14 @@ public final class StillImageActivity extends AppCompatActivity {
               }
             });
 
-    ImageView settingsButton = findViewById(R.id.settings_button);
+    /*ImageView settingsButton = findViewById(R.id.settings_button);
     settingsButton.setOnClickListener(
         v -> {
           Intent intent = new Intent(getApplicationContext(), SettingsActivity.class);
           intent.putExtra(
               SettingsActivity.EXTRA_LAUNCH_SOURCE, SettingsActivity.LaunchSource.STILL_IMAGE);
           startActivity(intent);
-        });
+        });*/
   }
 
   @Override

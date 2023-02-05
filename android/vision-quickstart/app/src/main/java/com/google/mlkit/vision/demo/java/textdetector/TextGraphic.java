@@ -31,6 +31,8 @@ import com.google.mlkit.vision.text.Text.Element;
 import com.google.mlkit.vision.text.Text.Line;
 import com.google.mlkit.vision.text.Text.Symbol;
 import com.google.mlkit.vision.text.Text.TextBlock;
+
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Locale;
 
@@ -55,6 +57,9 @@ public class TextGraphic extends Graphic {
   private final boolean shouldGroupTextInBlocks;
   private final boolean showLanguageTag;
   private final boolean showConfidence;
+
+  public static String[] Word_src;
+  public static ArrayList<String> WordsToFind = new ArrayList<>();
 
   TextGraphic(
       GraphicOverlay overlay,
@@ -88,12 +93,23 @@ public class TextGraphic extends Graphic {
   /** Draws the text block annotations for position, size, and raw value on the supplied canvas. */
   @Override
   public void draw(Canvas canvas) {
-    Log.d(TAG, "Text is: " + text.getText());
+    boolean gridDone = false;
+    //Log.d(TAG, "Text is: " + text.getText());
     for (TextBlock textBlock : text.getTextBlocks()) {
       // Renders the text at the bottom of the box.
-      Log.d(TAG, "TextBlock text is: " + textBlock.getText());
+      /*Log.d(TAG, "TextBlock text is: " + textBlock.getText());
       Log.d(TAG, "TextBlock boundingbox is: " + textBlock.getBoundingBox());
-      Log.d(TAG, "TextBlock cornerpoint is: " + Arrays.toString(textBlock.getCornerPoints()));
+      Log.d(TAG, "TextBlock cornerpoint is: " + Arrays.toString(textBlock.getCornerPoints()));*/
+      String textToProcess = textBlock.getText();
+      if (textToProcess.contains("\n") && !(gridDone)) {
+        Word_src = textToProcess.split("\n");
+        gridDone = true;
+      }else{
+        WordsToFind.add(textToProcess);
+        Log.d(TAG, "A word to find is: " + textToProcess);
+      }
+
+
       if (shouldGroupTextInBlocks) {
         String text =
             showLanguageTag
@@ -109,11 +125,11 @@ public class TextGraphic extends Graphic {
             canvas);
       } else {
         for (Line line : textBlock.getLines()) {
-          Log.d(TAG, "Line text is: " + line.getText());
+          /*Log.d(TAG, "Line text is: " + line.getText());
           Log.d(TAG, "Line boundingbox is: " + line.getBoundingBox());
           Log.d(TAG, "Line cornerpoint is: " + Arrays.toString(line.getCornerPoints()));
           Log.d(TAG, "Line confidence is: " + line.getConfidence());
-          Log.d(TAG, "Line angle is: " + line.getAngle());
+          Log.d(TAG, "Line angle is: " + line.getAngle());*/
           String text =
               showLanguageTag
                   ? String.format(
@@ -126,23 +142,27 @@ public class TextGraphic extends Graphic {
           drawText(text, new RectF(line.getBoundingBox()), TEXT_SIZE + 2 * STROKE_WIDTH, canvas);
 
           for (Element element : line.getElements()) {
-            Log.d(TAG, "Element text is: " + element.getText());
+            /*Log.d(TAG, "Element text is: " + element.getText());
             Log.d(TAG, "Element boundingbox is: " + element.getBoundingBox());
             Log.d(TAG, "Element cornerpoint is: " + Arrays.toString(element.getCornerPoints()));
             Log.d(TAG, "Element language is: " + element.getRecognizedLanguage());
             Log.d(TAG, "Element confidence is: " + element.getConfidence());
-            Log.d(TAG, "Element angle is: " + element.getAngle());
+            Log.d(TAG, "Element angle is: " + element.getAngle());*/
             for (Symbol symbol : element.getSymbols()) {
-              Log.d(TAG, "Symbol text is: " + symbol.getText());
+              /*Log.d(TAG, "Symbol text is: " + symbol.getText());
               Log.d(TAG, "Symbol boundingbox is: " + symbol.getBoundingBox());
               Log.d(TAG, "Symbol cornerpoint is: " + Arrays.toString(symbol.getCornerPoints()));
               Log.d(TAG, "Symbol confidence is: " + symbol.getConfidence());
-              Log.d(TAG, "Symbol angle is: " + symbol.getAngle());
+              Log.d(TAG, "Symbol angle is: " + symbol.getAngle());*/
             }
           }
         }
       }
     }
+    /*for (int i = 0; i <= Word_src.length; i++) {
+      Word_src[i] = Word_src[i].replace('|', 'I').replaceAll("\\s", "");
+      Log.d(TAG, "A source line is: " + Word_src[i]);
+    }*/
   }
 
   private void drawText(String text, RectF rect, float textHeight, Canvas canvas) {
